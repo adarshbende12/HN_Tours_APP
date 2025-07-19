@@ -1,0 +1,181 @@
+# Image Addresses and Usage Documentation
+# All images are now centrally managed from src/config/imageConfig.ts
+
+## HERO SECTION IMAGES (Slideshow)
+1. https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
+   - Title: "Discover Amazing Adventures"
+   - Subtitle: "Experience the beauty of India"
+   - Usage: Hero slideshow slide 1
+
+2. https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
+   - Title: "Heritage & Culture"
+   - Subtitle: "Explore ancient monuments and traditions"
+   - Usage: Hero slideshow slide 2
+
+3. https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
+   - Title: "Natural Wonders"
+   - Subtitle: "From mountains to beaches"
+   - Usage: Hero slideshow slide 3
+
+4. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
+   - Title: "Adventure Awaits"
+   - Subtitle: "Thrilling experiences in the Himalayas"
+   - Usage: Hero slideshow slide 4
+
+## GALLERY SECTION IMAGES
+1. https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Taj Mahal at Sunrise"
+   - Location: "Agra"
+   - Usage: Gallery grid
+
+2. https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Golden Triangle Heritage"
+   - Location: "Delhi"
+   - Usage: Gallery grid
+
+3. https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Kerala Backwaters"
+   - Location: "Alleppey"
+   - Usage: Gallery grid
+
+4. https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Goa Beach Paradise"
+   - Location: "Goa"
+   - Usage: Gallery grid
+
+5. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Himalayan Adventure"
+   - Location: "Manali"
+   - Usage: Gallery grid
+
+6. https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Rajasthan Heritage"
+   - Location: "Jaisalmer"
+   - Usage: Gallery grid
+
+7. https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Mountain Landscapes"
+   - Location: "Himachal Pradesh"
+   - Usage: Gallery grid
+
+8. https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Temple Architecture"
+   - Location: "South India"
+   - Usage: Gallery grid
+
+9. https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+   - Title: "Coastal Beauty"
+   - Location: "Kerala"
+   - Usage: Gallery grid
+
+10. https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+    - Title: "Cultural Heritage"
+    - Location: "Rajasthan"
+    - Usage: Gallery grid
+
+11. https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
+    - Title: "Desert Safari"
+    - Location: "Thar Desert"
+    - Usage: Gallery grid
+
+12. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+    - Title: "Snow Adventures"
+    - Location: "Kashmir"
+    - Usage: Gallery grid
+
+## TOUR PACKAGE IMAGES
+
+### Kerala - God's Own Country (kerala-gods-own-country)
+Main Image: https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+
+### Kashmir Valley Extended Paradise (kashmir-valley-extended)
+Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+
+### Kashmir Valley Paradise (kashmir-valley-tour)
+Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
+
+### Manali, Kullu & Manikaran Adventure (manali-kullu-manikaran)
+Main Image: https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+
+### Manali & Kullu Adventure (manali-kullu-adventure)
+Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
+
+### Kerala Backwaters Experience (kerala-backwaters)
+Main Image: https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+Gallery Images:
+- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
+- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
+
+## REVIEW AVATARS
+1. https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: uma uppalapathi review avatar
+
+2. https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: ruhid akram review avatar
+
+3. https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: Prem Battu review avatar
+
+4. https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: Avinash Jampa review avatar
+
+5. https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: Podili Srinu review avatar
+
+6. https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
+   - Usage: Dr Pratyusha review avatar
+
+## HOW TO UPDATE IMAGES
+To change any image in the project:
+1. Open src/config/imageConfig.ts
+2. Find the relevant section (hero, gallery, tours, reviews)
+3. Replace the URL with your new image URL
+4. Save the file - changes will reflect throughout the entire project
+
+## CENTRALIZED MANAGEMENT BENEFITS
+- Single source of truth for all images
+- Easy bulk updates and maintenance
+- Consistent image management
+- Type-safe image references
+- Helper functions for easy access
+- Automatic fallbacks for missing images

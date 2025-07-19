@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, MapPin, Calendar, Users, Play } from 'lucide-react';
-import { siteConfig } from '../config/siteConfig';
+import { siteConfig, getHeroImagesForSite } from '../config/siteConfig';
 
 const Hero: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const { hero, company, social } = siteConfig;
+  const { company, social } = siteConfig;
+  const heroImages = getHeroImagesForSite();
   
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % hero.images.length);
-    }, hero.autoSlideInterval);
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, siteConfig.hero.autoSlideInterval);
     return () => clearInterval(timer);
-  }, [hero.autoSlideInterval, hero.images.length]);
+  }, [heroImages.length]);
 
   const scrollToTours = () => {
     const element = document.getElementById('tours');
@@ -28,7 +29,7 @@ const Hero: React.FC = () => {
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Slideshow */}
       <div className="absolute inset-0 z-0">
-        {hero.images.map((image, index) => (
+        {heroImages.map((image, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
@@ -58,11 +59,11 @@ const Hero: React.FC = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white to-orange-200 bg-clip-text text-transparent">
-              {hero.images[currentSlide].title}
+              {heroImages[currentSlide].title}
             </span>
           </h1>
           <p className="text-lg md:text-2xl mb-6 md:mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed animate-fade-in-up-delayed">
-            {hero.images[currentSlide].subtitle}. Experience unforgettable journeys with {company.name} {company.tagline}.
+            {heroImages[currentSlide].subtitle}. Experience unforgettable journeys with {company.name} {company.tagline}.
           </p>
         </div>
         
@@ -106,7 +107,7 @@ const Hero: React.FC = () => {
 
       {/* Slide Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 flex space-x-2">
-        {hero.images.map((_, index) => (
+        {heroImages.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
