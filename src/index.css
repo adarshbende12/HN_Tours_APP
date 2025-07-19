@@ -146,6 +146,28 @@ html {
   }
 }
 
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-text {
+  animation: marquee 20s linear infinite;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   /* Reduce padding on mobile */

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Instagram, Youtube, ExternalLink, Eye } from 'lucide-react';
 import { galleryImages } from '../config/galleryConfig';
 import { siteConfig } from '../config/siteConfig';
-import InstagramEmbeds from './InstagramEmbeds';
 
 const Gallery: React.FC = () => {
   const navigate = useNavigate();
@@ -57,11 +56,6 @@ const Gallery: React.FC = () => {
               <ExternalLink className="h-3 w-3 md:h-4 md:w-4" />
             </button>
           </div>
-        </div>
-
-        {/* Instagram Embeds Section */}
-        <div className="mb-12 md:mb-16">
-          <InstagramEmbeds />
         </div>
 
         {/* Photo Gallery Section */}

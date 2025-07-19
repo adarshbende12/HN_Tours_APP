@@ -13,6 +13,7 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 import TourDetail from './components/TourDetail';
 import AllTours from './components/AllTours';
 import AllGallery from './components/AllGallery';
+import MarqueeText from './components/MarqueeText';
 
 function HomePage() {
   return (
@@ -41,7 +42,8 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="min-h-screen pt-8">
+        <MarqueeText />
         <ScrollToTop />
         <Header />
         <Routes>

@@ -85,8 +85,13 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Office Address</h4>
                   <p className="text-gray-600">
-                    {contact.address.street}<br />
-                    {contact.address.city} - {contact.address.pincode}, {contact.address.country}
+                    {contact.address.street}
+                    {contact.address.city && contact.address.pincode && contact.address.country && (
+                      <>
+                        <br />
+                        {contact.address.city} - {contact.address.pincode}, {contact.address.country}
+                      </>
+                    )}
                   </p>
                 </div>
               </div>
