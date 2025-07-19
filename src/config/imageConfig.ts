@@ -36,7 +36,7 @@ export const imageConfig: ImageConfig = {
       subtitle: "From mountains to beaches"
     },
     {
-      url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      url: "https://images.pexels.com/photos/3974036/pexels-photo-3974036.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
       title: "Adventure Awaits",
       subtitle: "Thrilling experiences in the Himalayas"
     }
@@ -65,7 +65,7 @@ export const imageConfig: ImageConfig = {
       location: "Goa"
     },
     {
-      url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: "https://images.pexels.com/photos/3974036/pexels-photo-3974036.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Himalayan Adventure",
       location: "Manali"
     },
@@ -75,7 +75,7 @@ export const imageConfig: ImageConfig = {
       location: "Jaisalmer"
     },
     {
-      url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: "https://images.pexels.com/photos/3974036/pexels-photo-3974036.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Mountain Landscapes",
       location: "Himachal Pradesh"
     },
@@ -100,7 +100,7 @@ export const imageConfig: ImageConfig = {
       location: "Thar Desert"
     },
     {
-      url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: "https://images.pexels.com/photos/3974036/pexels-photo-3974036.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Snow Adventures",
       location: "Kashmir"
     }
