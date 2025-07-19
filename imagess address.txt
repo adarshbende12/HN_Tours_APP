@@ -1,181 +1,206 @@
-# Image Addresses and Usage Documentation
-# All images are now centrally managed from src/config/imageConfig.ts
+// Central image configuration for the entire project
+// All image URLs are managed from this single file
 
-## HERO SECTION IMAGES (Slideshow)
-1. https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
-   - Title: "Discover Amazing Adventures"
-   - Subtitle: "Experience the beauty of India"
-   - Usage: Hero slideshow slide 1
+export interface ImageConfig {
+  hero: {
+    url: string;
+    title: string;
+    subtitle: string;
+  }[];
+  gallery: {
+    url: string;
+    title: string;
+    location: string;
+  }[];
+  tours: {
+    [tourId: string]: {
+      main: string;
+      gallery: string[];
+    };
+  };
+  reviews: {
+    avatars: string[];
+  };
+}
 
-2. https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
-   - Title: "Heritage & Culture"
-   - Subtitle: "Explore ancient monuments and traditions"
-   - Usage: Hero slideshow slide 2
+export const imageConfig: ImageConfig = {
+  // Hero section slideshow images
+  hero: [
+    {
+      url: "https://unsplash.com/photos/people-at-taj-mahal-india-Axl4311WzQU",
+      title: "Discover Amazing Adventures",
+      subtitle: "Experience the beauty of India"
+    },
+    {
+      url: "https://unsplash.com/photos/a-river-running-through-a-town-surrounded-by-mountains-NZy0rW16hvA",
+      title: "Natural Wonders",
+      subtitle: "From mountains to beaches"
+    },
+    {
+      url: "https://unsplash.com/photos/a-man-walking-through-a-rice-field-next-to-palm-trees-dc4b3ff3f24f",
+      title: "Heritage & Culture",
+      subtitle: "Explore ancient monuments and traditions"
+    },
+    {
+      url: "https://unsplash.com/photos/a-snow-covered-mountain-with-a-lake-in-the-foreground-5b7e67e1e610",
+      title: "Adventure Awaits",
+      subtitle: "Thrilling experiences in the Himalayas"
+    }
+  ],
 
-3. https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
-   - Title: "Natural Wonders"
-   - Subtitle: "From mountains to beaches"
-   - Usage: Hero slideshow slide 3
+  // Gallery section images
+  gallery: [
+    {
+      url: "https://unsplash.com/photos/a-large-white-building-with-a-fountain-in-front-of-it-F97jJczAPdU",
+      title: "Taj Mahal at Sunrise",
+      location: "Agra"
+    },
+    {
+      url: "https://unsplash.com/s/photos/delhi-monuments", // Browse this page to pick a specific Delhi monument
+      title: "Golden Triangle Heritage",
+      location: "Delhi"
+    },
+    {
+      url: "https://unsplash.com/s/photos/kerala-backwaters", // Browse this page to pick specific backwater scenes
+      title: "Kerala Backwaters",
+      location: "Alleppey"
+    },
+    {
+      url: "https://unsplash.com/photos/a-beach-with-a-boat-on-the-sand-and-trees-in-the-background-3LZpXgx4_pQ",
+      title: "Goa Beach Paradise",
+      location: "Goa"
+    },
+    {
+      url: "https://unsplash.com/s/photos/manali", // Browse this page to pick specific Manali images
+      title: "Himalayan Adventure",
+      location: "Manali"
+    },
+    {
+      url: "https://unsplash.com/s/photos/rajasthan-desert", // Browse this page for Jaisalmer/desert images
+      title: "Rajasthan Heritage",
+      location: "Jaisalmer"
+    },
+    {
+      url: "https://unsplash.com/s/photos/himachal-pradesh", // Browse this page for Himachal Pradesh landscapes
+      title: "Mountain Landscapes",
+      location: "Himachal Pradesh"
+    },
+    {
+      url: "https://unsplash.com/s/photos/south-india-temple", // Browse this page for South India temples
+      title: "Temple Architecture",
+      location: "South India"
+    },
+    {
+      url: "https://unsplash.com/s/photos/kerala-beach", // Browse this page for Kerala coastal images
+      title: "Coastal Beauty",
+      location: "Kerala"
+    },
+    {
+      url: "https://unsplash.com/s/photos/rajasthan-culture", // Browse this page for Rajasthan cultural scenes
+      title: "Cultural Heritage",
+      location: "Rajasthan"
+    },
+    {
+      url: "https://unsplash.com/photos/man-riding-camel-on-desert-during-daytime-T1uwEuKYmZU",
+      title: "Desert Safari",
+      location: "Thar Desert"
+    },
+    {
+      url: "https://unsplash.com/s/photos/kashmir-snowfall", // Browse this page for Kashmir snow images
+      title: "Snow Adventures",
+      location: "Kashmir"
+    }
+  ],
 
-4. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop
-   - Title: "Adventure Awaits"
-   - Subtitle: "Thrilling experiences in the Himalayas"
-   - Usage: Hero slideshow slide 4
+  // Tour package specific images
+  tours: {
+    "kerala-gods-own-country": {
+      main: "https://unsplash.com/photos/a-houseboat-sailing-in-Alappuzha-backwaters-in-Kerala-state-in-India-fcb4ff66d9a8",
+      gallery: [
+        "https://unsplash.com/s/photos/kerala-backwaters",
+        "https://unsplash.com/s/photos/kerala-culture",
+        "https://unsplash.com/s/photos/kerala-beach",
+        "https://unsplash.com/photos/a-serene-view-of-a-person-rowing-a-wooden-canoe-in-Kerala's-picturesque-backwaters-5b7e67e1e610"
+      ]
+    },
+    "kashmir-valley-extended": {
+      main: "https://unsplash.com/photos/a-snow-covered-mountain-with-a-lake-in-the-foreground-5b7e67e1e610",
+      gallery: [
+        "https://unsplash.com/s/photos/kashmir-snowfall",
+        "https://unsplash.com/s/photos/kashmir-valley",
+        "https://unsplash.com/photos/a-view-of-a-snowy-mountain-range-with-trees-k6u0UUsnhcQ"
+      ]
+    },
+    "kashmir-valley-tour": {
+      main: "https://unsplash.com/photos/a-view-of-a-snowy-mountain-range-with-trees-k6u0UUsnhcQ",
+      gallery: [
+        "https://unsplash.com/s/photos/kashmir-snowfall",
+        "https://unsplash.com/s/photos/kashmir-valley",
+        "https://unsplash.com/photos/a-snow-covered-mountain-with-a-lake-in-the-foreground-5b7e67e1e610"
+      ]
+    },
+    "manali-kullu-manikaran": {
+      main: "https://unsplash.com/s/photos/manali",
+      gallery: [
+        "https://unsplash.com/s/photos/kullu-manali", // Browse this for Kullu-Manali specific images
+        "https://unsplash.com/s/photos/manikaran", // Browse this for Manikaran specific images
+        "https://unsplash.com/photos/a-river-running-through-a-town-surrounded-by-mountains-NZy0rW16hvA"
+      ]
+    },
+    "manali-kullu-adventure": {
+      main: "https://unsplash.com/s/photos/manali",
+      gallery: [
+        "https://unsplash.com/s/photos/kullu-manali",
+        "https://unsplash.com/photos/a-river-running-through-a-town-surrounded-by-mountains-NZy0rW16hvA",
+        "https://unsplash.com/s/photos/india-adventure-travel" // General adventure images
+      ]
+    },
+    "kerala-backwaters": { // This tour ID is duplicated, using specific backwater images for clarity.
+      main: "https://unsplash.com/s/photos/kerala-backwaters",
+      gallery: [
+        "https://unsplash.com/photos/a-houseboat-sailing-in-Alappuzha-backwaters-in-Kerala-state-in-India-fcb4ff66d9a8",
+        "https://unsplash.com/photos/a-serene-view-of-a-person-rowing-a-wooden-canoe-in-Kerala's-picturesque-backwaters-5b7e67e1e610"
+      ]
+    }
+  },
 
-## GALLERY SECTION IMAGES
-1. https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Taj Mahal at Sunrise"
-   - Location: "Agra"
-   - Usage: Gallery grid
+  // Review avatars
+  reviews: {
+    avatars: [
+      "https://unsplash.com/s/photos/diverse-people", // Visit this page to pick 6 distinct avatars
+      "https://unsplash.com/s/photos/diverse-people",
+      "https://unsplash.com/s/photos/diverse-people",
+      "https://unsplash.com/s/photos/diverse-people",
+      "https://unsplash.com/s/photos/diverse-people",
+      "https://unsplash.com/s/photos/diverse-people"
+    ]
+  }
+};
 
-2. https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Golden Triangle Heritage"
-   - Location: "Delhi"
-   - Usage: Gallery grid
+// Helper functions to get images by category
+export const getHeroImages = () => imageConfig.hero;
+export const getGalleryImages = () => imageConfig.gallery;
+export const getTourImages = (tourId: string) => imageConfig.tours[tourId];
+export const getReviewAvatars = () => imageConfig.reviews.avatars;
 
-3. https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Kerala Backwaters"
-   - Location: "Alleppey"
-   - Usage: Gallery grid
-
-4. https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Goa Beach Paradise"
-   - Location: "Goa"
-   - Usage: Gallery grid
-
-5. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Himalayan Adventure"
-   - Location: "Manali"
-   - Usage: Gallery grid
-
-6. https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Rajasthan Heritage"
-   - Location: "Jaisalmer"
-   - Usage: Gallery grid
-
-7. https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Mountain Landscapes"
-   - Location: "Himachal Pradesh"
-   - Usage: Gallery grid
-
-8. https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Temple Architecture"
-   - Location: "South India"
-   - Usage: Gallery grid
-
-9. https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-   - Title: "Coastal Beauty"
-   - Location: "Kerala"
-   - Usage: Gallery grid
-
-10. https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-    - Title: "Cultural Heritage"
-    - Location: "Rajasthan"
-    - Usage: Gallery grid
-
-11. https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
-    - Title: "Desert Safari"
-    - Location: "Thar Desert"
-    - Usage: Gallery grid
-
-12. https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-    - Title: "Snow Adventures"
-    - Location: "Kashmir"
-    - Usage: Gallery grid
-
-## TOUR PACKAGE IMAGES
-
-### Kerala - God's Own Country (kerala-gods-own-country)
-Main Image: https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-
-### Kashmir Valley Extended Paradise (kashmir-valley-extended)
-Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-
-### Kashmir Valley Paradise (kashmir-valley-tour)
-Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800
-
-### Manali, Kullu & Manikaran Adventure (manali-kullu-manikaran)
-Main Image: https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-
-### Manali & Kullu Adventure (manali-kullu-adventure)
-Main Image: https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800
-
-### Kerala Backwaters Experience (kerala-backwaters)
-Main Image: https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-Gallery Images:
-- https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800
-- https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800
-
-## REVIEW AVATARS
-1. https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: uma uppalapathi review avatar
-
-2. https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: ruhid akram review avatar
-
-3. https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: Prem Battu review avatar
-
-4. https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: Avinash Jampa review avatar
-
-5. https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: Podili Srinu review avatar
-
-6. https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop
-   - Usage: Dr Pratyusha review avatar
-
-## HOW TO UPDATE IMAGES
-To change any image in the project:
-1. Open src/config/imageConfig.ts
-2. Find the relevant section (hero, gallery, tours, reviews)
-3. Replace the URL with your new image URL
-4. Save the file - changes will reflect throughout the entire project
-
-## CENTRALIZED MANAGEMENT BENEFITS
-- Single source of truth for all images
-- Easy bulk updates and maintenance
-- Consistent image management
-- Type-safe image references
-- Helper functions for easy access
-- Automatic fallbacks for missing images
+// Helper function to get all image URLs (useful for preloading)
+export const getAllImageUrls = (): string[] => {
+  const urls: string[] = [];
+  
+  // Hero images
+  imageConfig.hero.forEach(img => urls.push(img.url));
+  
+  // Gallery images
+  imageConfig.gallery.forEach(img => urls.push(img.url));
+  
+  // Tour images
+  Object.values(imageConfig.tours).forEach(tour => {
+    urls.push(tour.main);
+    urls.push(...tour.gallery);
+  });
+  
+  // Review avatars
+  urls.push(...imageConfig.reviews.avatars);
+  
+  return [...new Set(urls)]; // Remove duplicates
+};
