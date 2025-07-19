@@ -31,25 +31,6 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
-          <div className="text-center p-3 md:p-4 bg-gray-50 rounded-xl">
-            <div className="text-xl md:text-3xl font-bold text-blue-600 mb-1">{company.experience}</div>
-            <div className="text-xs md:text-base text-gray-600">Years</div>
-          </div>
-          <div className="text-center p-3 md:p-4 bg-gray-50 rounded-xl">
-            <div className="text-xl md:text-3xl font-bold text-blue-600 mb-1">{company.customers}</div>
-            <div className="text-xs md:text-base text-gray-600">Customers</div>
-          </div>
-          <div className="text-center p-3 md:p-4 bg-gray-50 rounded-xl">
-            <div className="text-xl md:text-3xl font-bold text-blue-600 mb-1">{company.destinations}</div>
-            <div className="text-xs md:text-base text-gray-600">Places</div>
-          </div>
-          <div className="text-center p-3 md:p-4 bg-gray-50 rounded-xl">
-            <div className="text-xl md:text-3xl font-bold text-blue-600 mb-1">{company.packages}</div>
-            <div className="text-xs md:text-base text-gray-600">Packages</div>
-          </div>
-        </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">

@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{siteConfig.company.name}</h1>
+              <h1 className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent drop-shadow-lg tracking-wide">{siteConfig.company.name}</h1>
             </div>
           </button>
 
