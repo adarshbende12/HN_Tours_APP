@@ -7,6 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Reviews from './components/Reviews';
 import Gallery from './components/Gallery';
+import FounderSection from './components/FounderSection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
@@ -24,6 +25,7 @@ function HomePage() {
       <Services />
       <Reviews />
       <Gallery />
+      <FounderSection />
       <Contact />
     </>
   );
