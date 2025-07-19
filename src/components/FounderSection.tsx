@@ -21,15 +21,12 @@ const FounderSection: React.FC = () => {
           {/* Founder Photo */}
           <div className="order-2 lg:order-1">
             <div className="relative">
-              <div className="w-full max-w-md mx-auto bg-gradient-to-br from-blue-100 to-indigo-200 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
-                {/* Placeholder for founder photo */}
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Camera className="h-12 w-12 text-gray-500" />
-                  </div>
-                  <p className="text-gray-600 font-medium">Hari's Photo</p>
-                  <p className="text-sm text-gray-500">Founder & Travel Enthusiast</p>
-                </div>
+              <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://andhrapachallu.com/cdn/shop/files/IMG_8108.jpg?v=1714669941&width=1500" 
+                  alt="Hari - Founder & Travel Enthusiast" 
+                  className="w-full h-[400px] object-cover"
+                />
               </div>
               
               {/* Floating elements */}
@@ -98,46 +95,6 @@ const FounderSection: React.FC = () => {
                 <div className="text-center p-4 bg-white rounded-xl shadow-lg">
                   <div className="text-2xl font-bold text-blue-600 mb-1">5.0</div>
                   <div className="text-sm text-gray-600">Rating</div>
-                </div>
-              </div>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-center space-x-3 p-4 bg-green-50 rounded-xl">
-                  <div className="bg-green-600 p-2 rounded-full">
-                    <Heart className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Homely Food</h4>
-                    <p className="text-sm text-gray-600">Authentic home-style meals</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-xl">
-                  <div className="bg-blue-600 p-2 rounded-full">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Personal Touch</h4>
-                    <p className="text-sm text-gray-600">Family-like hospitality</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3 p-4 bg-orange-50 rounded-xl">
-                  <div className="bg-orange-600 p-2 rounded-full">
-                    <Award className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Expert Guidance</h4>
-                    <p className="text-sm text-gray-600">Local knowledge & insights</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3 p-4 bg-purple-50 rounded-xl">
-                  <div className="bg-purple-600 p-2 rounded-full">
-                    <Star className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">Authentic Experiences</h4>
-                    <p className="text-sm text-gray-600">Real cultural immersion</p>
-                  </div>
                 </div>
               </div>
             </div>

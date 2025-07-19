@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                   <MapPin className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Office Address</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Address</h4>
                   <p className="text-gray-600">
                     {contact.address.street}
                     {contact.address.city && contact.address.pincode && contact.address.country && (
@@ -102,20 +102,21 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-900 mb-1">Office Hours</h4>
-                  <p className="text-gray-600">{contact.officeHours.weekdays}</p>
-                  <p className="text-gray-600">{contact.officeHours.weekend}</p>
+                  <p className="text-gray-600">24/7</p>
                 </div>
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="mt-8 bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <MapPin className="h-12 w-12 mx-auto mb-2" />
-                <p>Interactive Map</p>
-                <p className="text-sm">Location: {contact.address.city}, {contact.address.country}</p>
+            {/* Interactive Map - Feature can be added here in the future */}
+            {/* 
+              <div className="mt-8 bg-gray-200 rounded-2xl h-64 flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <MapPin className="h-12 w-12 mx-auto mb-2" />
+                  <p>Interactive Map</p>
+                  <p className="text-sm">Location: {contact.address.city}, {contact.address.country}</p>
+                </div>
               </div>
-            </div>
+            */}
           </div>
 
           {/* Contact Form */}
