@@ -92,24 +92,24 @@ export const siteConfig: SiteConfig = {
     autoSlideInterval: 5000, // 5 seconds
     images: [
       {
-        url: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-        title: "Discover Incredible India",
-        subtitle: "Experience the timeless beauty of the Taj Mahal"
+        url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+        title: "Discover Amazing Adventures",
+        subtitle: "Experience the beauty of India"
       },
       {
         url: "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-        title: "Royal Heritage & Culture",
-        subtitle: "Explore magnificent forts and palaces of Rajasthan"
+        title: "Heritage & Culture",
+        subtitle: "Explore ancient monuments and traditions"
       },
       {
         url: "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-        title: "God's Own Country",
-        subtitle: "Serene backwaters and lush landscapes of Kerala"
+        title: "Natural Wonders",
+        subtitle: "From mountains to beaches"
       },
       {
         url: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
-        title: "Himalayan Paradise",
-        subtitle: "Snow-capped peaks and valleys of Kashmir & Himachal"
+        title: "Adventure Awaits",
+        subtitle: "Thrilling experiences in the Himalayas"
       }
     ]
   },

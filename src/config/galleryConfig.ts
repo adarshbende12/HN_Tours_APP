@@ -12,8 +12,8 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     url: "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Amer Fort Majesty",
-    location: "Jaipur"
+    title: "Golden Triangle Heritage",
+    location: "Delhi"
   },
   {
     url: "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -22,18 +22,23 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     url: "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Golden Beaches",
+    title: "Goa Beach Paradise",
     location: "Goa"
   },
   {
-    url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Himalayan Peaks",
+    url: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Himalayan Adventure",
     location: "Manali"
   },
   {
     url: "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Desert Fort",
+    title: "Rajasthan Heritage",
     location: "Jaisalmer"
+  },
+  {
+    url: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Mountain Landscapes",
+    location: "Himachal Pradesh"
   },
   {
     url: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -43,26 +48,21 @@ export const galleryImages: GalleryImage[] = [
   {
     url: "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
     title: "Coastal Beauty",
-    location: "Kerala Coast"
+    location: "Kerala"
   },
   {
-    url: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Snow-Capped Mountains",
-    location: "Kashmir Valley"
-  },
-  {
-    url: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Mughal Architecture",
-    location: "Agra"
+    url: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Cultural Heritage",
+    location: "Rajasthan"
   },
   {
     url: "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Golden City",
-    location: "Jaisalmer"
+    title: "Desert Safari",
+    location: "Thar Desert"
   },
   {
-    url: "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Spice Plantations",
-    location: "Munnar"
+    url: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
+    title: "Snow Adventures",
+    location: "Kashmir"
   }
 ];
