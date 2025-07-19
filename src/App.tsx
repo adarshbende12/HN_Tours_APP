@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
+import MarqueeText from './components/MarqueeText';
 import Hero from './components/Hero';
 import TourPackages from './components/TourPackages';
 import About from './components/About';
