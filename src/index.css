@@ -149,23 +149,31 @@ html {
 /* Marquee animation */
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
 .marquee-container {
-  height: 32px;
+  height: auto;
   display: flex;
   align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.marquee-text {
-  animation: marquee 20s linear infinite;
-  font-weight: 600;
-  font-size: 14px;
+.marquee-inner {
+  animation: marquee 25s linear infinite;
+  display: inline-block;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .marquee-inner {
+    animation-duration: 40s;
+  }
 }
 
 /* Mobile optimizations */
