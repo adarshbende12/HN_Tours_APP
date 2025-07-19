@@ -16,7 +16,7 @@ const TourPackages: React.FC = () => {
   };
 
   // Show only top 4 tours on mobile, 6 on desktop
-  const displayedTours = tourPackages.slice(0, 4);
+  const displayedTours = tourPackages.slice(0, siteConfig.tours.displayCount);
 
   return (
     <section id="tours" className="py-12 md:py-20 bg-gray-50">
@@ -30,11 +30,11 @@ const TourPackages: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+        <div className="flex overflow-x-auto pb-4 space-x-4 md:space-x-6 scrollbar-hide">
           {displayedTours.map((tour) => (
             <div
               key={tour.id}
-              className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer"
+              className="flex-shrink-0 w-72 md:w-80 bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer"
               onClick={() => handleTourClick(tour.id)}
             >
               <div className="relative overflow-hidden">
