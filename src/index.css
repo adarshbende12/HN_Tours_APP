@@ -165,14 +165,14 @@ html {
 }
 
 .marquee-inner {
-  animation: marquee 25s linear infinite;
+  animation: marquee 20s linear infinite;
   display: inline-block;
 }
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .marquee-inner {
-    animation-duration: 40s;
+    animation-duration: 30s;
   }
 }
 
