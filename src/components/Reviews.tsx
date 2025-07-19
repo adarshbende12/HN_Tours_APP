@@ -47,11 +47,6 @@ const Reviews: React.FC = () => {
                 className="flex-shrink-0 w-80 bg-gray-50 rounded-xl p-4 shadow-lg"
               >
                 <div className="flex items-center mb-3">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="w-10 h-10 rounded-full object-cover mr-3"
-                  />
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">{review.name}</h4>
                     <p className="text-xs text-gray-600">{review.location}</p>

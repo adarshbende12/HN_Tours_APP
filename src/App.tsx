@@ -23,9 +23,9 @@ function HomePage() {
       <TourPackages />
       <About />
       <Services />
+      <FounderSection />
       <Reviews />
       <Gallery />
-      <FounderSection />
       <Contact />
     </>
   );
@@ -44,7 +44,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen pt-8">
+      <div className="min-h-screen pt-20">
         <MarqueeText />
         <ScrollToTop />
         <Header />

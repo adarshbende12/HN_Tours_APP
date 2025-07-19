@@ -41,7 +41,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-8 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header className="fixed top-12 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent drop-shadow-lg tracking-wide">{siteConfig.company.name}</h1>
+              <h1 className="text-xl font-bold text-gray-900">{siteConfig.company.name}</h1>
             </div>
           </button>
 

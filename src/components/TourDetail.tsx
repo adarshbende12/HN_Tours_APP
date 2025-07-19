@@ -341,20 +341,6 @@ const TourDetail: React.FC = () => {
                 </div>
               </div>
 
-              {/* Contact Info - Regular flow, not sticky */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6">
-                <h4 className="font-bold text-gray-900 mb-4">Need Help?</h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <MessageCircle className="h-4 w-4 text-blue-600" />
-                    <span>WhatsApp: {siteConfig.contact.phones[0]}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Calendar className="h-4 w-4 text-blue-600" />
-                    <span>Available 24/7</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
