@@ -34,7 +34,6 @@ const Reviews: React.FC = () => {
               {renderStars(Math.round(reviews.overallRating))}
             </div>
             <span className="text-base md:text-lg font-semibold text-gray-900">{reviews.overallRating}/5</span>
-            <span className="text-sm md:text-base text-gray-600">({reviews.totalReviews} reviews)</span>
           </div>
         </div>
 

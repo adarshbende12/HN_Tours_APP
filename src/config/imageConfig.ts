@@ -12,12 +12,6 @@ export interface ImageConfig {
     title: string;
     location: string;
   }[];
-  tours: {
-    [tourId: string]: {
-      main: string;
-      gallery: string[];
-    };
-  };
   reviews: {
     avatars: string[];
   };
@@ -112,77 +106,6 @@ export const imageConfig: ImageConfig = {
     }
   ],
 
-  // Tour package specific images
-  tours: {
-    "kerala-gods-own-country": {
-      main: "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    "kashmir-valley-extended": {
-      main: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    "kashmir-valley-tour": {
-      main: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    "manali-kullu-manikaran": {
-      main: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    "manali-kullu-adventure": {
-      main: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1532728/pexels-photo-1532728.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    "kerala-backwaters": {
-      main: "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-      gallery: [
-        "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/258385/pexels-photo-258385.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    }
-  },
-
   // Review avatars
   reviews: {
     avatars: [
@@ -199,7 +122,6 @@ export const imageConfig: ImageConfig = {
 // Helper functions to get images by category
 export const getHeroImages = () => imageConfig.hero;
 export const getGalleryImages = () => imageConfig.gallery;
-export const getTourImages = (tourId: string) => imageConfig.tours[tourId];
 export const getReviewAvatars = () => imageConfig.reviews.avatars;
 
 // Helper function to get all image URLs (useful for preloading)
@@ -211,12 +133,6 @@ export const getAllImageUrls = (): string[] => {
   
   // Gallery images
   imageConfig.gallery.forEach(img => urls.push(img.url));
-  
-  // Tour images
-  Object.values(imageConfig.tours).forEach(tour => {
-    urls.push(tour.main);
-    urls.push(...tour.gallery);
-  });
   
   // Review avatars
   urls.push(...imageConfig.reviews.avatars);

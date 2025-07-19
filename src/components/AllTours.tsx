@@ -147,9 +147,8 @@ const AllTours: React.FC = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 mx-auto shadow-lg"
             >
               <Package className="h-6 w-6" />
-              <span>View All Packages ({tourPackages.length}) - Sorted by Price</span>
+              <span>View All Packages ({tourPackages.length})</span>
             </button>
-            <p className="text-gray-600 mt-2">See all tour packages sorted from lowest to highest price</p>
           </div>
 
           {/* Destinations Grid */}
@@ -228,7 +227,7 @@ const AllTours: React.FC = () => {
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
               {destination 
                 ? `Discover amazing tour packages in ${destination}. Each package is carefully crafted for an unforgettable experience.`
-                : 'Browse our complete collection of tour packages, sorted by price from lowest to highest.'
+                : 'Browse our complete collection of tour packages.'
               }
             </p>
             <button
@@ -290,13 +289,9 @@ const AllTours: React.FC = () => {
               Showing {filteredTours.length} of {tourPackages.length} tours
               {destination && ` in ${destination}`}
             </p>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-600">Total Reviews:</span>
-              <span className="font-semibold text-blue-600">{siteConfig.reviews.totalReviews}</span>
-              <div className="flex items-center space-x-1">
-                <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                <span className="font-semibold">{siteConfig.reviews.overallRating}</span>
-              </div>
+            <div className="flex items-center space-x-1">
+              <Star className="h-4 w-4 text-yellow-400 fill-current" />
+              <span className="font-semibold">{siteConfig.reviews.overallRating}</span>
             </div>
           </div>
         </div>

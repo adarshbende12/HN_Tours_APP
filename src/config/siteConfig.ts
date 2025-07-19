@@ -35,7 +35,6 @@ export interface SiteConfig {
   };
   reviews: {
     overallRating: number;
-    totalReviews: string;
     displayCount: number;
   };
   hero: {
@@ -82,7 +81,6 @@ export const siteConfig: SiteConfig = {
   },
   reviews: {
     overallRating: 4.8,
-    totalReviews: "6",
     displayCount: 6 // Number of reviews to display
   },
   hero: {

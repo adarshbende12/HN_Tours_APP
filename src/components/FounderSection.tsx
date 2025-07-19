@@ -103,7 +103,7 @@ const FounderSection: React.FC = () => {
               <div className="text-sm text-gray-600">Major Destinations</div>
             </div>
             <div className="text-center p-4 bg-white rounded-xl shadow-lg">
-              <div className="text-2xl font-bold text-blue-600 mb-1">4.8</div>
+              <div className="text-2xl font-bold text-blue-600 mb-1">{siteConfig.reviews.overallRating}</div>
               <div className="text-sm text-gray-600">Rating</div>
             </div>
           </div>

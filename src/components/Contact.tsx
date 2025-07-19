@@ -1,6 +1,32 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
+import { tourPackages } from '../data/tours';
+
+// Helper function to get canonical destination names
+const getCanonicalDestinationName = (location: string): string => {
+  if (location.toLowerCase().includes('kerala') || 
+      location.toLowerCase().includes('kochi') || 
+      location.toLowerCase().includes('munnar') || 
+      location.toLowerCase().includes('alleppey') ||
+      location.toLowerCase().includes('kumarakom')) {
+    return 'Kerala';
+  }
+  if (location.toLowerCase().includes('manali') || 
+      location.toLowerCase().includes('kullu') || 
+      location.toLowerCase().includes('solang') ||
+      location.toLowerCase().includes('rohtang')) {
+    return 'Manali';
+  }
+  if (location.toLowerCase().includes('kashmir') || 
+      location.toLowerCase().includes('srinagar') || 
+      location.toLowerCase().includes('gulmarg') ||
+      location.toLowerCase().includes('pahalgam') ||
+      location.toLowerCase().includes('sonamarg')) {
+    return 'Kashmir';
+  }
+  return location; // fallback to original location
+};
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +38,11 @@ const Contact: React.FC = () => {
   });
 
   const { contact } = siteConfig;
+  
+  // Get unique destinations dynamically from tour packages
+  const uniqueDestinations = Array.from(new Set(
+    tourPackages.map(tour => getCanonicalDestinationName(tour.location))
+  )).sort();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -186,12 +217,11 @@ const Contact: React.FC = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">Select a destination</option>
-                    <option value="golden-triangle">Golden Triangle</option>
-                    <option value="kerala">Kerala Backwaters</option>
-                    <option value="goa">Goa Beaches</option>
-                    <option value="himalayas">Himalayan Adventure</option>
-                    <option value="rajasthan">Rajasthan Heritage</option>
-                    <option value="south-india">South India Temples</option>
+                    {uniqueDestinations.map((destination) => (
+                      <option key={destination} value={destination.toLowerCase()}>
+                        {destination}
+                      </option>
+                    ))}
                     <option value="custom">Custom Package</option>
                   </select>
                 </div>
