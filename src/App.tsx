@@ -44,7 +44,7 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen pt-[116px]">
+      <div className="min-h-screen pt-[108px]">
         <MarqueeText />
         <ScrollToTop />
         <Header />
