@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
                 <Plane className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold">{company.name}</h1>
+                <h1 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{company.name}</h1>
                 <p className="text-sm text-gray-400">{company.tagline}</p>
               </div>
             </div>

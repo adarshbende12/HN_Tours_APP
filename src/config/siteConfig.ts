@@ -53,9 +53,9 @@ export const siteConfig: SiteConfig = {
     tagline: "",
     description: "Your trusted travel partner for over a decade. We create unforgettable experiences and help you discover the world's most beautiful destinations.",
     founded: "2014",
-    experience: "10+",
+    experience: "7+",
     customers: "5000+",
-    destinations: "50+",
+    destinations: "6+",
     packages: "100+"
   },
   contact: {
@@ -81,7 +81,7 @@ export const siteConfig: SiteConfig = {
     twitter: "#"  // Add your Twitter URL
   },
   reviews: {
-    overallRating: 5.0,
+    overallRating: 4.8,
     totalReviews: "6",
     displayCount: 6 // Number of reviews to display
   },
