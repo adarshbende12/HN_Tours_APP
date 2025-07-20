@@ -395,12 +395,12 @@ export const tourPackages: TourPackage[] = [
     originalPrice: "₹12,500",
     discountedPrice: "₹8,999",
     rating: 4.8,
-    image: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Adventure",
     highlights: ["Hadimba Devi Temple", "Vashisht Temple & Hot Springs", "Van Vihar Park", "Mall Road", "Solang Valley Adventure", "Atal Tunnel", "Sissu Village", "Naggar Castle", "Jogini Waterfalls", "Kullu Valley", "Kasol Cafés", "Manikaran Sahib Hot Springs"],
     brochureUrl: "https://drive.google.com/file/d/1BQPjRr5T8rAdjhWwwp0eaosU1HZMGlID/view?usp=drive_link",
     gallery: [
-      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -465,15 +465,15 @@ export const tourPackages: TourPackage[] = [
     originalPrice: "₹10,000",
     discountedPrice: "₹6,499",
     rating: 4.7,
-    image: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
     category: "Adventure",
     highlights: ["Rohtang Pass Visit", "Solang Valley Activities", "Atal Tunnel Experience", "Hidimba Temple", "Hot Springs", "Adventure Sports"],
     brochureUrl: "https://drive.google.com/file/d/1BQPjRr5T8rAdjhWwwp0eaosU1HZMGlID/view?usp=drive_link",
     gallery: [
-      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
       "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800"
     ],
     itinerary: [

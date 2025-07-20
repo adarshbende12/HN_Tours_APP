@@ -65,7 +65,7 @@ export const imageConfig: ImageConfig = {
       location: "Goa"
     },
     {
-      url: "https://images.pexels.com/photos/3974036/pexels-photo-3974036.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: "https://images.pexels.com/photos/858115/pexels-photo-858115.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Himalayan Adventure",
       location: "Manali"
     },

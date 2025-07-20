@@ -2,32 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { tourPackages } from '../data/tours';
 import { siteConfig } from '../config/siteConfig';
+import { getCanonicalDestinationName } from '../utils/tourUtils';
 import { MapPin, Clock, Users, Star, ArrowRight, Filter, Search, ArrowLeft, Package } from 'lucide-react';
-
-// Helper function to get canonical destination names
-const getCanonicalDestinationName = (location: string): string => {
-  if (location.toLowerCase().includes('kerala') || 
-      location.toLowerCase().includes('kochi') || 
-      location.toLowerCase().includes('munnar') || 
-      location.toLowerCase().includes('alleppey') ||
-      location.toLowerCase().includes('kumarakom')) {
-    return 'Kerala';
-  }
-  if (location.toLowerCase().includes('manali') || 
-      location.toLowerCase().includes('kullu') || 
-      location.toLowerCase().includes('solang') ||
-      location.toLowerCase().includes('rohtang')) {
-    return 'Manali';
-  }
-  if (location.toLowerCase().includes('kashmir') || 
-      location.toLowerCase().includes('srinagar') || 
-      location.toLowerCase().includes('gulmarg') ||
-      location.toLowerCase().includes('pahalgam') ||
-      location.toLowerCase().includes('sonamarg')) {
-    return 'Kashmir';
-  }
-  return location; // fallback to original location
-};
 
 const AllTours: React.FC = () => {
   const navigate = useNavigate();

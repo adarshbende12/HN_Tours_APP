@@ -2,31 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
 import { tourPackages } from '../data/tours';
-
-// Helper function to get canonical destination names
-const getCanonicalDestinationName = (location: string): string => {
-  if (location.toLowerCase().includes('kerala') || 
-      location.toLowerCase().includes('kochi') || 
-      location.toLowerCase().includes('munnar') || 
-      location.toLowerCase().includes('alleppey') ||
-      location.toLowerCase().includes('kumarakom')) {
-    return 'Kerala';
-  }
-  if (location.toLowerCase().includes('manali') || 
-      location.toLowerCase().includes('kullu') || 
-      location.toLowerCase().includes('solang') ||
-      location.toLowerCase().includes('rohtang')) {
-    return 'Manali';
-  }
-  if (location.toLowerCase().includes('kashmir') || 
-      location.toLowerCase().includes('srinagar') || 
-      location.toLowerCase().includes('gulmarg') ||
-      location.toLowerCase().includes('pahalgam') ||
-      location.toLowerCase().includes('sonamarg')) {
-    return 'Kashmir';
-  }
-  return location; // fallback to original location
-};
+import { getCanonicalDestinationName } from '../utils/tourUtils';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({

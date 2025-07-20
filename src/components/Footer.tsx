@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Plane, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import { siteConfig } from '../config/siteConfig';
+import { tourPackages } from '../data/tours';
+import { getCanonicalDestinationName } from '../utils/tourUtils';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
   const { company, contact, social } = siteConfig;
+
+  // Generate unique destinations from tour packages
+  const popularDestinations = useMemo(() => {
+    const destinations = Array.from(new Set(
+      tourPackages.map(tour => getCanonicalDestinationName(tour.location))
+    )).sort();
+    return destinations;
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -21,6 +33,10 @@ const Footer: React.FC = () => {
       twitter: social.twitter
     };
     window.open(urls[platform as keyof typeof urls], '_blank');
+  };
+
+  const navigateToDestination = (destination: string) => {
+    navigate(`/tours?destination=${encodeURIComponent(destination)}`);
   };
 
   return (
@@ -128,36 +144,16 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Popular Destinations</h3>
             <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Golden Triangle
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Kerala Backwaters
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Goa Beaches
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Himalayan Tours
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Rajasthan Heritage
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  South India Temples
-                </a>
-              </li>
+              {popularDestinations.map((destination, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => navigateToDestination(destination)}
+                    className="text-gray-400 hover:text-white transition-colors duration-200"
+                  >
+                    {destination}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 

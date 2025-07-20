@@ -67,7 +67,7 @@ export const siteConfig: SiteConfig = {
       pincode: "",
       country: ""
     },
-    whatsapp: "919876543210", // Format: country code + number (no spaces, no + sign)
+    whatsapp: "917569187415", // Format: country code + number (no spaces, no + sign)
     officeHours: {
       weekdays: "24/7",
       weekend: "24/7"
