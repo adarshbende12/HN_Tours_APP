@@ -53,16 +53,48 @@ const TourPackages: React.FC = () => {
           <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 text-center">
             Browse by Destination
           </h3>
-          <div className="flex overflow-x-auto pb-4 space-x-3 md:space-x-4 scrollbar-hide">
-            {uniqueDestinations.map((destination, index) => (
-              <button
-                key={index}
-                onClick={() => handleDestinationFilter(destination)}
-                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
-              >
-                {destination}
-              </button>
-            ))}
+          <div className="flex overflow-x-auto pb-4 space-x-4 md:space-x-6 scrollbar-hide">
+            {uniqueDestinations.map((destination, index) => {
+              // Map destination names to image files
+              const getDestinationImage = (dest: string) => {
+                switch (dest.toLowerCase()) {
+                  case 'kashmir':
+                    return '/Kashmir-removebg-preview.png';
+                  case 'thailand':
+                    return '/thailand-removebg-preview.png';
+                  case 'manali':
+                    return '/manali-removebg-preview.png';
+                  case 'kerala':
+                    return '/Kerala-removebg-preview.png';
+                  default:
+                    return '/manali-removebg-preview.png'; // fallback image
+                }
+              };
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleDestinationFilter(destination)}
+                  className="flex-shrink-0 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-4 md:p-6 group"
+                >
+                  <div className="text-center">
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 flex items-center justify-center">
+                      <img
+                        src={getDestinationImage(destination)}
+                        alt={`${destination} destination`}
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <h4 className="font-semibold text-gray-900 text-sm md:text-base whitespace-nowrap">
+                      {destination}
+                    </h4>
+                    <p className="text-xs text-gray-600 mt-1">
+                      {tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === destination).length} packages
+                    </p>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
 
