@@ -24,6 +24,142 @@ export interface TourPackage {
 
 export const tourPackages: TourPackage[] = [
   {
+    id: "thailand-adventure",
+    title: "Thailand Adventure Package",
+    location: "Thailand",
+    duration: "4 Days / 3 Nights",
+    groupSize: "1-20 People",
+    originalPrice: "₹19,999",
+    discountedPrice: "₹14,999",
+    rating: 4.8,
+    image: "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "International",
+    highlights: ["Airport Pick up & Drop", "3-Star Hotel Stay", "Coral Island Adventure", "Tiger Park Entry", "Marble Buddha Entry", "Golden Buddha Entry", "Big Buddha Temple", "Pattaya City View Point", "Gems Gallery Visit", "Safari World & Marine Park", "Chao Phraya Princes Cruise", "Water Sports Activities", "Speedboat Rides", "Indian Restaurant Meals"],
+    brochureUrl: "/brochures/thailand-adventure.pdf",
+    gallery: [
+      "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800"
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: "Arrival in Thailand",
+        description: "Welcome to Thailand! Upon arrival, you'll be greeted and transferred to your 3-star hotel for check-in and rest.",
+        activities: [
+          "Airport pickup service from Hyderabad, Chennai, or Visakhapatnam",
+          "Transfer to 3-star hotel accommodation",
+          "Hotel check-in and room allocation",
+          "Rest and acclimatization",
+          "Evening at leisure to explore nearby areas",
+          "Welcome briefing about the tour itinerary",
+          "Overnight stay at hotel"
+        ]
+      },
+      {
+        day: 2,
+        title: "Pattaya to Coral Island Adventure",
+        description: "Experience the tropical paradise of Coral Island (Koh Larn) with thrilling water sports and pristine beaches just 7 kilometers off Pattaya's coast.",
+        activities: [
+          "Delicious breakfast at the hotel",
+          "Thrilling 45-minute speedboat ride to Coral Island",
+          "Stunning views of the Gulf of Thailand during journey",
+          "Buffet lunch at Indian restaurant on the island",
+          "Parasailing - soar high for aerial views",
+          "Jet Skiing - speed across the waves",
+          "Banana Boat ride - group activity on inflatable boat",
+          "Snorkeling - explore vibrant coral reefs and marine life",
+          "Scuba Diving - underwater experience with professional guidance",
+          "Sea Walking - walk on ocean floor with special helmet",
+          "Relax on serene beaches with turquoise waters",
+          "Walk along the shore and enjoy fresh sea breeze",
+          "Return to Pattaya in evening",
+          "Overnight stay at hotel"
+        ]
+      },
+      {
+        day: 3,
+        title: "Pattaya Sightseeing & Transfer to Bangkok",
+        description: "Explore Pattaya's cultural landmarks and scenic viewpoints before heading to Bangkok for your final night.",
+        activities: [
+          "Breakfast at the hotel",
+          "Hotel check-out and luggage arrangement",
+          "Visit Gems Gallery - one of Bangkok's largest jewelry stores",
+          "Explore high-quality gemstones and exquisite designs",
+          "Learn about gem cutting and handcrafted jewelry",
+          "Pattaya City View Point on Pratumnak Hill",
+          "Breathtaking panoramic views of Pattaya's crescent-shaped bay",
+          "Perfect photo opportunities with stunning backdrops",
+          "Big Buddha Temple visit",
+          "See the impressive Reclining Buddha (15m tall, 46m long)",
+          "One of the largest reclining Buddha images in the world",
+          "Delicious lunch at Indian restaurant in Pattaya",
+          "Transfer to Bangkok",
+          "Hotel check-in in Bangkok",
+          "Evening at leisure"
+        ]
+      },
+      {
+        day: 4,
+        title: "Safari World & Marine Park / Departure",
+        description: "Optional full-day adventure at Safari World and Marine Park, or free time for leisure before departure.",
+        activities: [
+          "Delightful breakfast at 9:30 AM",
+          "Hotel check-out at 11:00 AM",
+          "Optional: Full-day Safari World and Marine Park tour",
+          "Safari Park - open-zoo experience with zebras, giraffes, tigers, lions",
+          "Marine Park - rare marine species and animal performances",
+          "Dolphin and seal shows",
+          "Buffet lunch at Jungle Cruise Restaurant",
+          "White tiger show experience",
+          "Jungle Cruise river ride adventure",
+          "Alternative: Free day for leisure and shopping",
+          "Explore the city at your own pace",
+          "Shop for souvenirs and local products",
+          "Relax at hotel or nearby attractions",
+          "Transfer to airport based on flight schedule",
+          "Departure with wonderful Thailand memories"
+        ]
+      }
+    ],
+    inclusions: [
+      "Round-trip flights from Hyderabad, Chennai, or Visakhapatnam",
+      "3 nights accommodation in 3-star hotels",
+      "Daily breakfast at all hotels",
+      "Airport pickup and drop transfers",
+      "45-minute speedboat ride to Coral Island",
+      "Buffet lunch at Indian restaurant on Coral Island",
+      "All water sports activities (Parasailing, Jet Skiing, Banana Boat)",
+      "Snorkeling and Sea Walking equipment",
+      "Professional guidance for Scuba Diving",
+      "Gems Gallery visit with guided tour",
+      "Pattaya City View Point entrance",
+      "Big Buddha Temple visit",
+      "Lunch at Indian restaurant in Pattaya",
+      "Private transportation for all sightseeing",
+      "English-speaking local guide",
+      "All entrance fees mentioned in itinerary"
+    ],
+    exclusions: [
+      "Dinner in Chao Phraya River Cruise (available as add-on)",
+      "Safari World & Marine Park full-day tour (optional add-on)",
+      "Tiger Park entry fees",
+      "Marble Buddha and Golden Buddha entry fees",
+      "Personal expenses and shopping",
+      "Tips and gratuities for guides and drivers",
+      "Travel insurance",
+      "Visa fees (if applicable)",
+      "Any meals not mentioned in inclusions",
+      "Additional water sports activities",
+      "Spa treatments and wellness services",
+      "International roaming charges",
+      "Any services not mentioned in inclusions"
+    ]
+  },
+  {
     id: "kerala-gods-own-country",
     title: "Kerala - God's Own Country",
     location: "Kochi, Munnar, Alleppey",
@@ -590,143 +726,6 @@ export const tourPackages: TourPackage[] = [
       "Ayurvedic treatments",
       "Tips and gratuities",
       "Travel insurance"
-    ]
-  }
-  ,
-  {
-    id: "thailand-adventure",
-    title: "Thailand Adventure Package",
-    location: "Thailand",
-    duration: "4 Days / 3 Nights",
-    groupSize: "2-20 People",
-    originalPrice: "₹19,999",
-    discountedPrice: "₹14,999",
-    rating: 4.8,
-    image: "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "International",
-    highlights: ["Airport Pick up & Drop", "3-Star Hotel Stay", "Coral Island Adventure", "Tiger Park Entry", "Marble Buddha Entry", "Golden Buddha Entry", "Big Buddha Temple", "Pattaya City View Point", "Gems Gallery Visit", "Safari World & Marine Park", "Chao Phraya Princes Cruise", "Water Sports Activities", "Speedboat Rides", "Indian Restaurant Meals"],
-    brochureUrl: "/brochures/thailand-adventure.pdf",
-    gallery: [
-      "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/1007657/pexels-photo-1007657.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "https://images.pexels.com/photos/962464/pexels-photo-962464.jpeg?auto=compress&cs=tinysrgb&w=800"
-    ],
-    itinerary: [
-      {
-        day: 1,
-        title: "Arrival in Thailand",
-        description: "Welcome to Thailand! Upon arrival, you'll be greeted and transferred to your 3-star hotel for check-in and rest.",
-        activities: [
-          "Airport pickup service from Hyderabad, Chennai, or Visakhapatnam",
-          "Transfer to 3-star hotel accommodation",
-          "Hotel check-in and room allocation",
-          "Rest and acclimatization",
-          "Evening at leisure to explore nearby areas",
-          "Welcome briefing about the tour itinerary",
-          "Overnight stay at hotel"
-        ]
-      },
-      {
-        day: 2,
-        title: "Pattaya to Coral Island Adventure",
-        description: "Experience the tropical paradise of Coral Island (Koh Larn) with thrilling water sports and pristine beaches just 7 kilometers off Pattaya's coast.",
-        activities: [
-          "Delicious breakfast at the hotel",
-          "Thrilling 45-minute speedboat ride to Coral Island",
-          "Stunning views of the Gulf of Thailand during journey",
-          "Buffet lunch at Indian restaurant on the island",
-          "Parasailing - soar high for aerial views",
-          "Jet Skiing - speed across the waves",
-          "Banana Boat ride - group activity on inflatable boat",
-          "Snorkeling - explore vibrant coral reefs and marine life",
-          "Scuba Diving - underwater experience with professional guidance",
-          "Sea Walking - walk on ocean floor with special helmet",
-          "Relax on serene beaches with turquoise waters",
-          "Walk along the shore and enjoy fresh sea breeze",
-          "Return to Pattaya in evening",
-          "Overnight stay at hotel"
-        ]
-      },
-      {
-        day: 3,
-        title: "Pattaya Sightseeing & Transfer to Bangkok",
-        description: "Explore Pattaya's cultural landmarks and scenic viewpoints before heading to Bangkok for your final night.",
-        activities: [
-          "Breakfast at the hotel",
-          "Hotel check-out and luggage arrangement",
-          "Visit Gems Gallery - one of Bangkok's largest jewelry stores",
-          "Explore high-quality gemstones and exquisite designs",
-          "Learn about gem cutting and handcrafted jewelry",
-          "Pattaya City View Point on Pratumnak Hill",
-          "Breathtaking panoramic views of Pattaya's crescent-shaped bay",
-          "Perfect photo opportunities with stunning backdrops",
-          "Big Buddha Temple visit",
-          "See the impressive Reclining Buddha (15m tall, 46m long)",
-          "One of the largest reclining Buddha images in the world",
-          "Delicious lunch at Indian restaurant in Pattaya",
-          "Transfer to Bangkok",
-          "Hotel check-in in Bangkok",
-          "Evening at leisure"
-        ]
-      },
-      {
-        day: 4,
-        title: "Safari World & Marine Park / Departure",
-        description: "Optional full-day adventure at Safari World and Marine Park, or free time for leisure before departure.",
-        activities: [
-          "Delightful breakfast at 9:30 AM",
-          "Hotel check-out at 11:00 AM",
-          "Optional: Full-day Safari World and Marine Park tour",
-          "Safari Park - open-zoo experience with zebras, giraffes, tigers, lions",
-          "Marine Park - rare marine species and animal performances",
-          "Dolphin and seal shows",
-          "Buffet lunch at Jungle Cruise Restaurant",
-          "White tiger show experience",
-          "Jungle Cruise river ride adventure",
-          "Alternative: Free day for leisure and shopping",
-          "Explore the city at your own pace",
-          "Shop for souvenirs and local products",
-          "Relax at hotel or nearby attractions",
-          "Transfer to airport based on flight schedule",
-          "Departure with wonderful Thailand memories"
-        ]
-      }
-    ],
-    inclusions: [
-      "Round-trip flights from Hyderabad, Chennai, or Visakhapatnam",
-      "3 nights accommodation in 3-star hotels",
-      "Daily breakfast at all hotels",
-      "Airport pickup and drop transfers",
-      "45-minute speedboat ride to Coral Island",
-      "Buffet lunch at Indian restaurant on Coral Island",
-      "All water sports activities (Parasailing, Jet Skiing, Banana Boat)",
-      "Snorkeling and Sea Walking equipment",
-      "Professional guidance for Scuba Diving",
-      "Gems Gallery visit with guided tour",
-      "Pattaya City View Point entrance",
-      "Big Buddha Temple visit",
-      "Lunch at Indian restaurant in Pattaya",
-      "Private transportation for all sightseeing",
-      "English-speaking local guide",
-      "All entrance fees mentioned in itinerary"
-    ],
-    exclusions: [
-      "Dinner in Chao Phraya River Cruise (available as add-on)",
-      "Safari World & Marine Park full-day tour (optional add-on)",
-      "Tiger Park entry fees",
-      "Marble Buddha and Golden Buddha entry fees",
-      "Personal expenses and shopping",
-      "Tips and gratuities for guides and drivers",
-      "Travel insurance",
-      "Visa fees (if applicable)",
-      "Any meals not mentioned in inclusions",
-      "Additional water sports activities",
-      "Spa treatments and wellness services",
-      "International roaming charges",
-      "Any services not mentioned in inclusions"
     ]
   }
 ];

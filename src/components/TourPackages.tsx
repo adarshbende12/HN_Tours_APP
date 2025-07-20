@@ -2,7 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { tourPackages } from '../data/tours';
 import { siteConfig } from '../config/siteConfig';
-import { MapPin, Clock, Star, ArrowRight } from 'lucide-react';
+import { getCanonicalDestinationName } from '../utils/tourUtils';
+import { MapPin, Clock, Star, ArrowRight, MessageCircle } from 'lucide-react';
 
 const TourPackages: React.FC = () => {
   const navigate = useNavigate();
@@ -14,6 +15,23 @@ const TourPackages: React.FC = () => {
   const handleViewAllTours = () => {
     navigate('/tours');
   };
+
+  const handleWhatsAppBooking = (tourTitle: string) => {
+    const { contact, company } = siteConfig;
+    const message = `Hi! I'm interested in booking the "${tourTitle}" package with ${company.name}. Could you please provide more details and help me with the booking process?`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${contact.whatsapp}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleDestinationFilter = (destination: string) => {
+    navigate(`/tours?destination=${encodeURIComponent(destination)}`);
+  };
+
+  // Get unique destinations for filter buttons
+  const uniqueDestinations = Array.from(new Set(
+    tourPackages.map(tour => getCanonicalDestinationName(tour.location))
+  )).sort();
 
   // Show only top 4 tours on mobile, 6 on desktop
   const displayedTours = tourPackages.slice(0, siteConfig.tours.displayCount);
@@ -28,6 +46,24 @@ const TourPackages: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
             Handpicked destinations showcasing India's best experiences.
           </p>
+        </div>
+
+        {/* Destination Filter Buttons */}
+        <div className="mb-8 md:mb-12">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 text-center">
+            Browse by Destination
+          </h3>
+          <div className="flex overflow-x-auto pb-4 space-x-3 md:space-x-4 scrollbar-hide">
+            {uniqueDestinations.map((destination, index) => (
+              <button
+                key={index}
+                onClick={() => handleDestinationFilter(destination)}
+                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+              >
+                {destination}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="flex overflow-x-auto pb-4 space-x-4 md:space-x-6 scrollbar-hide">
@@ -94,6 +130,14 @@ const TourPackages: React.FC = () => {
                 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 md:py-3 px-4 md:px-6 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 group">
                   <span>View Details</span>
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+
+                <button 
+                  onClick={() => handleWhatsAppBooking(tour.title)}
+                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 md:py-3 px-4 md:px-6 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 mt-2"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  <span>Book via WhatsApp</span>
                 </button>
               </div>
             </div>
