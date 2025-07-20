@@ -46,8 +46,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Plane className="h-6 w-6 text-white" />
+              <div className="flex-shrink-0">
+                <img 
+                  src="/IMG_0463.PNG" 
+                  alt="HN Cottages Logo" 
+                  className="h-12 w-auto object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-white">{company.name}</h1>
@@ -219,17 +223,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © {currentYear} {company.name} {company.tagline}. All rights reserved.
-            </div>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Cookie Policy
-              </a>
             </div>
           </div>
         </div>
