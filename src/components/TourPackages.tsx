@@ -28,10 +28,35 @@ const TourPackages: React.FC = () => {
     navigate(`/tours?destination=${encodeURIComponent(destination)}`);
   };
 
-  // Get unique destinations for filter buttons
-  const uniqueDestinations = Array.from(new Set(
+  const handleComingSoonClick = () => {
+    navigate('/coming-soon');
+  };
+
+  // Get unique destinations from existing tour packages
+  const existingDestinations = Array.from(new Set(
     tourPackages.map(tour => getCanonicalDestinationName(tour.location))
   )).sort();
+
+  // Define coming soon destinations
+  const comingSoonDestinations = [
+    { name: 'Singapore', image: '/Singapore-removebg-preview.png', type: 'comingSoon' },
+    { name: 'Dubai', image: '/Dubai-removebg-preview.png', type: 'comingSoon' },
+    { name: 'Bali', image: '/Bali-removebg-preview.png', type: 'comingSoon' },
+    { name: 'Paris', image: '/Paris-removebg-preview.png', type: 'comingSoon' },
+    { name: 'Leh Ladakh', image: '/LEH_LADAKH-removebg-preview.png', type: 'comingSoon' },
+    { name: 'Agra', image: '/AGRA-removebg-preview.png', type: 'comingSoon' }
+  ];
+
+  // Combine existing destinations with coming soon destinations
+  const allDestinations = useMemo(() => {
+    const existing = existingDestinations.map(dest => ({
+      name: dest,
+      type: 'package' as const,
+      packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === dest).length
+    }));
+    
+    return [...existing, ...comingSoonDestinations];
+  }, [existingDestinations]);
 
   // Show only top 4 tours on mobile, 6 on desktop
   const displayedTours = tourPackages.slice(0, siteConfig.tours.displayCount);
@@ -54,10 +79,16 @@ const TourPackages: React.FC = () => {
             Browse by Destination
           </h3>
           <div className="flex overflow-x-auto pb-4 space-x-4 md:space-x-6 scrollbar-hide">
-            {uniqueDestinations.map((destination, index) => {
+            {allDestinations.map((destination, index) => {
               // Map destination names to image files
-              const getDestinationImage = (dest: string) => {
-                switch (dest.toLowerCase()) {
+              const getDestinationImage = (dest: { name: string; type: string; image?: string }) => {
+                // If it's a coming soon destination, use the provided image
+                if (dest.type === 'comingSoon' && dest.image) {
+                  return dest.image;
+                }
+                
+                // For existing destinations, use the original mapping
+                switch (dest.name.toLowerCase()) {
                   case 'kashmir':
                     return '/Kashmir-removebg-preview.png';
                   case 'thailand':
@@ -74,7 +105,7 @@ const TourPackages: React.FC = () => {
               return (
                 <button
                   key={index}
-                  onClick={() => handleDestinationFilter(destination)}
+                  onClick={() => destination.type === 'comingSoon' ? handleComingSoonClick() : handleDestinationFilter(destination.name)}
                   className="flex-shrink-0 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-4 md:p-6 group"
                 >
                   <div className="text-center">
@@ -82,15 +113,18 @@ const TourPackages: React.FC = () => {
                       <img
                         src={getDestinationImage(destination)}
                         alt={`${destination} destination`}
+                        alt={`${destination.name} destination`}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                     <h4 className="font-semibold text-gray-900 text-sm md:text-base whitespace-nowrap">
-                      {destination}
+                      {destination.name}
                     </h4>
-                    <p className="text-xs text-gray-600 mt-1">
-                      {tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === destination).length} packages
-                    </p>
+                    {destination.type === 'package' && (
+                      <p className="text-xs text-gray-600 mt-1">
+                        {destination.packageCount} packages
+                      </p>
+                    )}
                   </div>
                 </button>
               );

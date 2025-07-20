@@ -15,6 +15,7 @@ import WhatsAppFloat from './components/WhatsAppFloat';
 import TourDetail from './components/TourDetail';
 import AllTours from './components/AllTours';
 import AllGallery from './components/AllGallery';
+import ComingSoon from './components/ComingSoon';
 
 function HomePage() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/tours" element={<AllTours />} />
           <Route path="/tour/:id" element={<TourDetail />} />
           <Route path="/all-gallery" element={<AllGallery />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
         </Routes>
         <Footer />
         <WhatsAppFloat />
