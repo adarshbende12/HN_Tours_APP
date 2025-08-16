@@ -66,31 +66,6 @@ const Hero: React.FC = () => {
             {heroImages[currentSlide].subtitle}. Experience unforgettable journeys with {company.name} {company.tagline}.
           </p>
 
-          {/* Tour Offers Row */}
-          <div className="mb-8 md:mb-12 animate-fade-in-up-delayed">
-            <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
-              <div className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 text-center min-w-[200px] md:min-w-[250px] border border-white/20">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">₹8,999</div>
-                <div className="text-sm md:text-base font-semibold text-orange-200 mb-1">Kerala</div>
-                <div className="text-xs md:text-sm text-gray-200">Natural Wonders</div>
-              </div>
-              <div className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 text-center min-w-[200px] md:min-w-[250px] border border-white/20">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">₹14,999</div>
-                <div className="text-sm md:text-base font-semibold text-orange-200 mb-1">Thailand</div>
-                <div className="text-xs md:text-sm text-gray-200">Heritage & Culture</div>
-              </div>
-              <div className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 text-center min-w-[200px] md:min-w-[250px] border border-white/20">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">₹6,499</div>
-                <div className="text-sm md:text-base font-semibold text-orange-200 mb-1">Manali</div>
-                <div className="text-xs md:text-sm text-gray-200">Discover Amazing Adventures</div>
-              </div>
-              <div className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-2xl p-4 md:p-6 text-center min-w-[200px] md:min-w-[250px] border border-white/20">
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">₹12,999</div>
-                <div className="text-sm md:text-base font-semibold text-orange-200 mb-1">Kashmir</div>
-                <div className="text-xs md:text-sm text-gray-200">Adventure Awaits</div>
-              </div>
-            </div>
-          </div>
         </div>
         
         {/* CTA Buttons */}
