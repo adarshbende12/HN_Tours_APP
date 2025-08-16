@@ -32,31 +32,45 @@ const TourPackages: React.FC = () => {
     navigate('/coming-soon');
   };
 
-  // Get unique destinations from existing tour packages
-  const existingDestinations = Array.from(new Set(
-    tourPackages.map(tour => getCanonicalDestinationName(tour.location))
-  )).sort();
-
-  // Define coming soon destinations
-  const comingSoonDestinations = [
-    { name: 'Singapore', image: '/Singapore-removebg-preview.png', type: 'comingSoon' },
-    { name: 'Dubai', image: '/Dubai-removebg-preview.png', type: 'comingSoon' },
-    { name: 'Bali', image: '/Bali-removebg-preview.png', type: 'comingSoon' },
-    { name: 'Paris', image: '/Paris-removebg-preview.png', type: 'comingSoon' },
-    { name: 'Leh Ladakh', image: '/LEH_LADAKH-removebg-preview.png', type: 'comingSoon' },
-    { name: 'Agra', image: '/AGRA-removebg-preview.png', type: 'comingSoon' }
-  ];
-
-  // Combine existing destinations with coming soon destinations
+  // Define destinations in specific order
   const allDestinations = useMemo(() => {
-    const existing = existingDestinations.map(dest => ({
-      name: dest,
-      type: 'package' as const,
-      packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === dest).length
-    }));
-    
-    return [...existing, ...comingSoonDestinations];
-  }, [existingDestinations]);
+    return [
+      {
+        name: 'Thailand',
+        type: 'package' as const,
+        packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === 'Thailand').length,
+        image: '/thailand-removebg-preview.png'
+      },
+      {
+        name: 'Manali',
+        type: 'package' as const,
+        packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === 'Manali').length,
+        image: '/manali-removebg-preview.png'
+      },
+      {
+        name: 'Kerala',
+        type: 'package' as const,
+        packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === 'Kerala').length,
+        image: '/Kerala-removebg-preview.png'
+      },
+      {
+        name: 'Kashmir',
+        type: 'package' as const,
+        packageCount: tourPackages.filter(tour => getCanonicalDestinationName(tour.location) === 'Kashmir').length,
+        image: '/Kashmir-removebg-preview.png'
+      },
+      {
+        name: 'Dubai',
+        type: 'comingSoon' as const,
+        image: '/Dubai-removebg-preview.png'
+      },
+      {
+        name: 'Singapore',
+        type: 'comingSoon' as const,
+        image: '/Singapore-removebg-preview.png'
+      }
+    ];
+  }, []);
 
   // Show only top 4 tours on mobile, 6 on desktop
   const displayedTours = tourPackages.slice(0, siteConfig.tours.displayCount);
@@ -80,28 +94,6 @@ const TourPackages: React.FC = () => {
           </h3>
           <div className="flex overflow-x-auto pb-4 space-x-4 md:space-x-6 scrollbar-hide">
             {allDestinations.map((destination, index) => {
-              // Map destination names to image files
-              const getDestinationImage = (dest: { name: string; type: string; image?: string }) => {
-                // If it's a coming soon destination, use the provided image
-                if (dest.type === 'comingSoon' && dest.image) {
-                  return dest.image;
-                }
-                
-                // For existing destinations, use the original mapping
-                switch (dest.name.toLowerCase()) {
-                  case 'kashmir':
-                    return '/Kashmir-removebg-preview.png';
-                  case 'thailand':
-                    return '/thailand-removebg-preview.png';
-                  case 'manali':
-                    return '/manali-removebg-preview.png';
-                  case 'kerala':
-                    return '/Kerala-removebg-preview.png';
-                  default:
-                    return '/manali-removebg-preview.png'; // fallback image
-                }
-              };
-
               return (
                 <button
                   key={index}
@@ -111,8 +103,7 @@ const TourPackages: React.FC = () => {
                   <div className="text-center">
                     <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 flex items-center justify-center">
                       <img
-                        src={getDestinationImage(destination)}
-                        alt={`${destination} destination`}
+                        src={destination.image}
                         alt={`${destination.name} destination`}
                         className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       />
@@ -120,7 +111,7 @@ const TourPackages: React.FC = () => {
                     <h4 className="font-semibold text-gray-900 text-sm md:text-base whitespace-nowrap">
                       {destination.name}
                     </h4>
-                    {destination.type === 'package' && (
+                    {destination.type === 'package' && 'packageCount' in destination && (
                       <p className="text-xs text-gray-600 mt-1">
                         {destination.packageCount} packages
                       </p>

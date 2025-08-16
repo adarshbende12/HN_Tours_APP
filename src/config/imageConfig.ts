@@ -21,7 +21,7 @@ export const imageConfig: ImageConfig = {
   // Hero section slideshow images
   hero: [
     {
-      url: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop",
+      url: "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Discover Amazing Adventures",
       subtitle: "Experience the beauty of India"
     },
@@ -45,7 +45,7 @@ export const imageConfig: ImageConfig = {
   // Gallery section images
   gallery: [
     {
-      url: "https://images.pexels.com/photos/3278215/pexels-photo-3278215.jpeg?auto=compress&cs=tinysrgb&w=800",
+      url: "https://images.pexels.com/photos/951006/pexels-photo-951006.jpeg?auto=compress&cs=tinysrgb&w=800",
       title: "Taj Mahal at Sunrise",
       location: "Agra"
     },
