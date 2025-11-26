@@ -14,7 +14,7 @@ const FounderSection: React.FC = () => {
             <div className="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden shadow-xl">
               <img 
                 src="https://andhrapachallu.com/cdn/shop/files/IMG_8108.jpg?v=1714669941&width=1500" 
-                alt="Hari - Founder & Travel Enthusiast" 
+                alt="Vamshi - Founder & Travel Enthusiast" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -46,7 +46,7 @@ const FounderSection: React.FC = () => {
             </h3>
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                Meet <strong>Hari</strong>, the passionate traveler and YouTuber who founded <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">{company.name}</span>. 
+                Meet <strong>Vamshi</strong>, the passionate traveler and entrepreneur who founded <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent font-bold">{company.name}</span>. 
                 His love for exploring new destinations and sharing authentic travel experiences led him to create 
                 something truly special in the travel industry.
               </p>
@@ -54,12 +54,12 @@ const FounderSection: React.FC = () => {
               {/* Mobile: Hide detailed paragraphs, Desktop: Show all */}
               <div className="hidden md:block space-y-4">
                 <p>
-                  As Hari traveled across India, he discovered that many travelers faced challenges finding 
+                  As Vamshi traveled across India, he discovered that many travelers faced challenges finding 
                   authentic experiences and comfortable accommodations that felt like home. The food, hospitality, 
                   and overall travel experience often didn't meet the expectations of fellow travelers.
                 </p>
                 <p>
-                  So, Hari decided to do something about it. He created <strong className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{company.name}</strong>! 
+                  So, Vamshi decided to do something about it. He created <strong className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{company.name}</strong>! 
                   It's all about bringing authentic travel experiences to everyone, no matter where they want to explore. 
                   From serene backwaters of Kerala to the majestic mountains of Kashmir, every tour is crafted with love, 
                   keeping the true essence of travel alive.
@@ -79,7 +79,7 @@ const FounderSection: React.FC = () => {
               </div>
               
               <p className="font-semibold text-blue-600">
-                Join us in celebrating Hari's love for adventure and authentic travel experiences. 
+                Join us in celebrating Vamshi's love for adventure and authentic travel experiences. 
                 Let's explore the incredible beauty of India together!
               </p>
               <p className="text-lg font-bold text-gray-900">
@@ -113,7 +113,7 @@ const FounderSection: React.FC = () => {
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Experience Hari's Vision?
+              Ready to Experience Vamshi's Vision?
             </h3>
             <p className="text-lg text-blue-100 mb-6 max-w-2xl mx-auto">
               Join thousands of travelers who have experienced the warmth of authentic Indian hospitality 

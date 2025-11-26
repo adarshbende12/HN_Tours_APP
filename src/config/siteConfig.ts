@@ -48,7 +48,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   company: {
-    name: "HN Cottages and Tours",
+    name: "Vamshi Tours and Travels",
     tagline: "",
     description: "Your trusted travel partner for over a decade. We create unforgettable experiences and help you discover the world's most beautiful destinations.",
     founded: "2014",
@@ -58,8 +58,8 @@ export const siteConfig: SiteConfig = {
     packages: "100+"
   },
   contact: {
-    phones: ["+91 75691 87415", "+91 98166 15747"],
-    emails: ["hntoursandtravels@gmail.com"],
+    phones: ["+91 76809 44421"],
+    emails: [],
     address: {
       street: "Manali, Hyderabad and Kerala",
       city: "",
@@ -67,15 +67,15 @@ export const siteConfig: SiteConfig = {
       pincode: "",
       country: ""
     },
-    whatsapp: "917569187415", // Format: country code + number (no spaces, no + sign)
+    whatsapp: "917680944421", // Format: country code + number (no spaces, no + sign)
     officeHours: {
       weekdays: "24/7",
       weekend: "24/7"
     }
   },
   social: {
-    instagram: "https://www.instagram.com/haricharanhn/?hl=en",
-    youtube: "https://www.youtube.com/@HNmotovlogs",
+    instagram: "/",
+    youtube: "/",
     facebook: "#", // Add your Facebook URL
     twitter: "#"  // Add your Twitter URL
   },
