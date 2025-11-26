@@ -47,16 +47,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <button onClick={goHome} className="flex items-center space-x-3">
-            <div className="flex-shrink-0">
-              <img 
-                src="/IMG_0463.PNG" 
-                alt="HN Cottages & Tours Logo" 
-                className="h-14 w-auto object-contain"
-              />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-gray-900">{siteConfig.company.name}</h1>
-            </div>
+            <h1 className="text-xl font-bold text-gray-900">{siteConfig.company.name}</h1>
           </button>
 
           {/* Desktop Navigation */}

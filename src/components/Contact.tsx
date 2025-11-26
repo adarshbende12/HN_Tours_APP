@@ -30,7 +30,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // You can add your form submission logic here
     alert('Thank you for your inquiry! We will get back to you soon.');
     setFormData({
       name: '',

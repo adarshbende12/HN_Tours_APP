@@ -57,13 +57,6 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0">
-                <img 
-                  src="/IMG_0463.PNG" 
-                  alt="HN Cottages Logo" 
-                  className="h-12 w-auto object-contain"
-                />
-              </div>
               <div>
                 <h1 className="text-xl font-bold text-white">{company.name}</h1>
                 <p className="text-sm text-gray-400">{company.tagline}</p>
